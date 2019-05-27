@@ -26,6 +26,7 @@ SECRET_KEY = 'csa9))g0&^c!70+u_ci3v1i)hfsn3koznumb$k_8=%j&2%ck4a'
 DEBUG = True
 
 ALLOWED_HOSTS = ['localhost:4200', 'https://dry-tundra-11883.herokuapp.com/']
+CORS_ORIGIN_ALLOW_ALL = True
 
 
 # Application definition
