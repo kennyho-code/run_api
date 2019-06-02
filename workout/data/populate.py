@@ -1,7 +1,7 @@
 import os
 import django
 import sys
-sys.path.append('/Users/kennyho/dev/projects/run/run_api/run_api/run_api')
+sys.path.append('/Users/kennyho/dev/projects/run/run_api/run_api')
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'run_api.settings')
 django.setup()
 from workout.models import Workout
@@ -37,6 +37,7 @@ def create_workout():
                 startdate=row['startdate'],
                 enddate=row['enddate'],
             )
+            print('%s saved...' % row['creation'])
             w.save()
 
 
