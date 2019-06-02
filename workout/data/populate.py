@@ -13,6 +13,13 @@ def create_workout():
     with open('running.json', 'r') as file:
         json_rows = json.load(file)
         for row in json_rows:
+            try:
+                creationdate = datetime.strptime(row['creationdate'], '%Y-%m-%d %X %z')
+                Workout.objects.get(creationdate=creationdate)
+            except Workout.DoesNotExist:
+                creationdate = None
+            if creationdate:
+                continue
             row['creationdate'] = datetime.strptime(row['creationdate'], '%Y-%m-%d %X %z')
             row['startdate'] = datetime.strptime(row['startdate'], '%Y-%m-%d %X %z')
             row['enddate'] = datetime.strptime(row['enddate'], '%Y-%m-%d %X %z')
