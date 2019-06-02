@@ -37,7 +37,7 @@ def create_workout():
                 startdate=row['startdate'],
                 enddate=row['enddate'],
             )
-            print('%s saved...' % row['creation'])
+            print('%s saved...' % row['creationdate'])
             w.save()
 
 
