@@ -44,6 +44,7 @@ def create_workout():
 
 
 if __name__ == '__main__':
+    # hello
     print('Populating running workouts...')
     create_workout()
     print('Finished running workouts...')
