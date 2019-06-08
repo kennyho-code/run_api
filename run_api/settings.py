@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ['RUN_API_SECRET']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if os.environ['ENIVRONMENT'] == 'DEV':
+if os.environ['ENVIRONMENT'] == 'DEV':
     DEBUG = True
 else:
     DEBUG = False
