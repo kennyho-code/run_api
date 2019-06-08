@@ -41,11 +41,8 @@ def create_workout():
             w.save()
 
 
-
-
-
 if __name__ == '__main__':
-    # hello
+    # populate
     print('Populating running workouts...')
     create_workout()
     print('Finished running workouts...')

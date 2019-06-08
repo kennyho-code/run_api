@@ -20,12 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'csa9))g0&^c!70+u_ci3v1i)hfsn3koznumb$k_8=%j&2%ck4a'
+SECRET_KEY = os.environ['RUN_API_SECRET']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost:4200', 'https://dry-tundra-11883.herokuapp.com/']
+ALLOWED_HOSTS = ['localhost:4200', 'https://run-dash.herokuapp.com/']
 CORS_ORIGIN_ALLOW_ALL = True
 
 
