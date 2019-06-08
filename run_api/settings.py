@@ -23,7 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ['RUN_API_SECRET']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+if os.environ['ENIVRONMENT'] == 'DEV':
+    DEBUG = True
+else:
+    DEBUG = False
 
 ALLOWED_HOSTS = ['localhost:4200', 'https://run-dash.herokuapp.com/']
 CORS_ORIGIN_ALLOW_ALL = True
